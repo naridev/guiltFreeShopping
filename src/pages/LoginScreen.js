@@ -4,10 +4,12 @@ import { Text, View, Image } from 'react-native';
 
 import styled from 'styled-components';
 
-//base images
+//images
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import back from '../images/back.png';
+import group from '../images/group.png';
+import layerCopy from '../images/layerCopy2.png';
 
 //components
 import PinkButton from '../components/PinkButton';
@@ -37,6 +39,12 @@ const BackSection = styled.View`
     padding-top: 50;
     padding-left: 10;
     justify-content: flex-start;
+`;
+
+const BackImage = styled.Image`
+    position: absolute;
+    top: 20%;
+    left: 50%;
 `;
 
 
@@ -73,6 +81,15 @@ const LoginScreen = props => {
                     source={twitter}
                 />
             </SocialSection>
+
+            <BackImage
+            source={group}
+            style={{zIndex:-1}}
+            />
+            <BackImage
+            source={layerCopy}
+            style={{zIndex:-2, left:'40%', top: '15%'}}
+            />
         </Container>
     )
 }
