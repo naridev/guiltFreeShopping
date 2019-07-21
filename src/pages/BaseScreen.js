@@ -12,6 +12,8 @@ import baseImage2 from '../images/base3.png'
 //components
 import PinkButton from '../components/PinkButton';
 
+import { withRouter } from 'react-router-native';
+
 const Container = styled.View`
     flex:1;
 	justify-content: center;
@@ -68,11 +70,15 @@ const BaseScreen = props => {
         </BaseSection>
 
         <ButtonSection>
-            <PinkButton/>
+            <PinkButton           
+            onPress={()=>{
+            props.history.push('/login');}}
+            title={'Start Shopping'}
+          />
         </ButtonSection>
 
         </Container>
     )
 }
 
-export default BaseScreen;
+export default withRouter(BaseScreen);

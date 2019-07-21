@@ -2,12 +2,32 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import BaseScreen from './pages/BaseScreen';
-import HomeScreen from './pages/HomeScreen';
+import LoginScreen from './pages/LoginScreen';
+
+import { Switch, Route, NativeRouter, Redirect } from 'react-router-native';
 
 const App = props => {
   return (
     <View style={styles.container}>
-      <BaseScreen/>
+    <NativeRouter>
+
+      <Switch>
+        <Route
+          path='/base'
+          component={BaseScreen}
+        />
+        <Route
+          path='/login'
+          component={LoginScreen}
+        />
+        <Redirect
+          from='/'
+          to='/base'
+        />
+
+      </Switch>
+
+    </NativeRouter>
     </View>
   );
 }

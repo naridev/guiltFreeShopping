@@ -31,9 +31,10 @@ const Container = styled.View`
 const PinkButton = ({title, onPress}) => {
     return(
         <Container>
-            <Button>
+            <Button
+                onPress={onPress}>
                 <Title>
-                    START SHOPPING
+                    {title.toUpperCase()}
                 </Title>
             </Button>
         </Container>
