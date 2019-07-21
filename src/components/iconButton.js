@@ -11,10 +11,9 @@ import { TouchableOpacity, Image } from 'react-native';
 
 */
 
-const IconButton = ({image, onPress, disabled}) => {
+const IconButton = ({image, onPress}) => {
   return(
     <TouchableOpacity
-      disabled={disabled}
       style={{
         padding: 12
       }}
@@ -22,10 +21,6 @@ const IconButton = ({image, onPress, disabled}) => {
     >
       <Image
         source={image}
-        style={{
-          width: 24,
-          height: 24
-        }}
       />
     </TouchableOpacity>
   )

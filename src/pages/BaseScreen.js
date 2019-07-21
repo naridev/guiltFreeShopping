@@ -18,6 +18,7 @@ const Container = styled.View`
     flex:1;
 	justify-content: center;
     align-items: center;
+    background-color: #f6f6f6;
 `;
 
 const Logo = styled.View`
@@ -70,11 +71,12 @@ const BaseScreen = props => {
         </BaseSection>
 
         <ButtonSection>
-            <PinkButton           
-            onPress={()=>{
-            props.history.push('/login');}}
-            title={'Start Shopping'}
-          />
+            <PinkButton  
+                title={'Start Shopping'}         
+                onPress={()=>{
+                props.history.push('/login');
+                }}
+            />
         </ButtonSection>
 
         </Container>

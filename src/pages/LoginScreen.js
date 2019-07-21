@@ -7,42 +7,62 @@ import styled from 'styled-components';
 //base images
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
+import back from '../images/back.png';
 
 //components
 import PinkButton from '../components/PinkButton';
+import InputField from '../components/InputField';
+import IconButton from '../components/IconButton';
+
+import { withRouter } from 'react-router-native';
+
 
 const Container = styled.View`
     flex:1;
-	justify-content: center;
-    align-items: center;
+    background-color: #F1F1F1;
 `;
 
 const InputSection = styled.View`
-    flex:1;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 `;
 
 const SocialSection = styled.View`
-    flex: 1;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
 `;
 
-const ButtonSection = styled.View`
-    flex: 1;
-    align-items: center;
-    padding-top: 70;
+const BackSection = styled.View`
+    padding-top: 50;
+    padding-left: 10;
+    justify-content: flex-start;
 `;
 
 
 const LoginScreen = props => {
     return(
         <Container>
+            <BackSection>
+                <IconButton 
+                    image={back}
+                    onPress={()=>{
+                    props.history.push('/base');
+                    }}
+                    style={{alignSelf:'flex-start',justifyContent: 'flex-start'}}
+                />
+            </BackSection>
+
             <InputSection>
+                <InputField
+                    placeholder='label1'
+                />
+                <InputField
+                    placeholder='label2'
+                />
                 <PinkButton
-                title={'Sign In'}/>
+                    title={'Sign In'}
+                />
             </InputSection>
 
             <SocialSection>
@@ -57,4 +77,4 @@ const LoginScreen = props => {
     )
 }
 
-export default LoginScreen;
+export default withRouter(LoginScreen);
