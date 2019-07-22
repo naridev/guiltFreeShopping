@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInput, Text, View } from 'react-native';
+import { TextInput, View } from 'react-native';
 
 const InputField = ({onChangeText, value, placeholder, secureTextEntry}) => {
     return(
@@ -11,7 +11,7 @@ const InputField = ({onChangeText, value, placeholder, secureTextEntry}) => {
                 autocorrect = {false}
                 placeholder = {placeholder}
                 secureTextEntry = {secureTextEntry}
-                placeholderTextColor="#777777"
+                placeholderTextColor="#515151"
             />
         </View>
     );
@@ -20,17 +20,12 @@ const InputField = ({onChangeText, value, placeholder, secureTextEntry}) => {
 const styles = {
     inputStyle: {
         height: 20,
-        color: '#000',
         paddingRight: 5,
         paddingLeft: 12,
         fontSize: 14,
         lineHeight: 23,
-        flex: 2
-    },
-    labelStyle: {
-        fontSize: 18,
-        paddingLeft: 20, 
-        flex: 1
+        flex: 2,
+        fontWeight: '500'
     },
     containerStyle: {
         width: 250,

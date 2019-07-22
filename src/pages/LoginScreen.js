@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 
 import styled from 'styled-components';
 
@@ -67,9 +67,18 @@ const LoginScreen = props => {
                 <InputField
                     placeholder='Email'
                 />
+                <View style={{flexDirection: 'row'}}>
                 <InputField
                     placeholder='Password'
                 />
+                <TouchableOpacity style={{
+                    position: 'absolute',
+                    left: '50%',
+                    marginTop: 15 
+                }}>
+                    <Text style={{color: '#808080'}}>Forgot?</Text>
+                </TouchableOpacity>
+                </View>
                 <PinkButton
                     title={'Sign In'}
                 />

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Animated } from 'react-native';
 
 import styled from 'styled-components';
 
@@ -11,6 +11,7 @@ import baseImage2 from '../images/base3.png'
 
 //components
 import PinkButton from '../components/PinkButton';
+import ImageLoader from '../components/ImageLoader';
 
 import { withRouter } from 'react-router-native';
 
@@ -41,14 +42,14 @@ const ButtonSection = styled.View`
     padding-top: 70;
 `;
 
-
 const BaseScreen = props => {
     return(
         <Container>
             <Logo>
-                <Image
+                <ImageLoader
                     source={header}
                 />
+
             </Logo>
         <BaseSection>
             <Image
