@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { Text, View, Image, Animated } from 'react-native';
 
@@ -6,8 +6,6 @@ import styled from 'styled-components';
 
 //base images
 import header from '../images/h1.png';
-import baseImage from '../images/base.png'
-import baseImage2 from '../images/base3.png'
 
 //components
 import PinkButton from '../components/PinkButton';
@@ -50,21 +48,20 @@ const BaseScreen = props => {
                 <ImageLoader
                     source={header}
                 />
-
             </Logo>
-        <BaseSection>
-            <Carousel/>
-        </BaseSection>
 
-        <ButtonSection>
-            <PinkButton  
-                title={'Start Shopping'}         
-                onPress={()=>{
-                props.history.push('/login');
-                }}
-            />
-        </ButtonSection>
+            <BaseSection>
+                <Carousel/>
+            </BaseSection>
 
+            <ButtonSection>
+                <PinkButton  
+                    title={'Start Shopping'}         
+                    onPress={()=>{
+                    props.history.push('/login');
+                    }}
+                />
+            </ButtonSection>
         </Container>
     )
 }

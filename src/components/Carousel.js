@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Carousel, { ParallaxImage } from 'react-native-snap-carousel';
-import { Dimensions, StyleSheet, View, Text } from 'react-native';
+import { Dimensions, StyleSheet, View } from 'react-native';
 
 const { width: screenWidth } = Dimensions.get('window')
 
