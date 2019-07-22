@@ -12,6 +12,7 @@ import baseImage2 from '../images/base3.png'
 //components
 import PinkButton from '../components/PinkButton';
 import ImageLoader from '../components/ImageLoader';
+import Carousel from '../components/Carousel';
 
 import { withRouter } from 'react-router-native';
 
@@ -23,23 +24,23 @@ const Container = styled.View`
 `;
 
 const Logo = styled.View`
-    height: 350;
-    justify-content: center;
+    height: 200;
+    justify-content: flex-end;
     align-items: center;
+    paddingBottom: 20;
 `;
 
 const BaseSection = styled.View`
-    flex: 1;
+    flex: 2;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    width: 400
 `;
 
 const ButtonSection = styled.View`
     flex: 1;
     align-items: center;
-    padding-top: 70;
+    padding-top: 10;
 `;
 
 const BaseScreen = props => {
@@ -52,23 +53,7 @@ const BaseScreen = props => {
 
             </Logo>
         <BaseSection>
-            <Image
-                style={{
-                    alignSelf: 'center',
-                    left: 12,
-                }}
-                source={baseImage}
-            />
-            <View
-                style={{  
-                    alignSelf: 'flex-end',
-                    right: 20
-                }}
-            >
-                <Image
-                    source={baseImage2}
-                />
-            </View>
+            <Carousel/>
         </BaseSection>
 
         <ButtonSection>

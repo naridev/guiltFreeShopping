@@ -13,6 +13,7 @@
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
     "react-native-fade-in-image": "^1.5.0",
+    "react-native-snap-carousel": "^3.8.0",
     "react-native-web": "^0.11.4",
     "react-router-native": "^5.0.1",
     "styled-components": "^4.3.2"

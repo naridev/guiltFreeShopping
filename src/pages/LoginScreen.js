@@ -61,7 +61,6 @@ const LoginScreen = props => {
                     style={{alignSelf:'flex-start'}}
                 />
             </BackSection>
-            {/* <Text style={{fontFamily: 'Verbana'}}>this is a test</Text> */}
 
             <InputSection>
                 <InputField
@@ -92,7 +91,6 @@ const LoginScreen = props => {
                 />
             </InputSection>
 
-            {/* Background Image */}
             <BackImage
                 source={group}
                 style={{zIndex:-1}}

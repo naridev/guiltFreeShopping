@@ -10,7 +10,7 @@ class ImageLoader extends Component {
     onLoad = () => {
       Animated.timing(this.state.opacity, {
         toValue: 1,
-        duration: 1000,
+        duration: 700,
         useNativeDriver: true,
       }).start();
     }
