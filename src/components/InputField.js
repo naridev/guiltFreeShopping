@@ -11,6 +11,7 @@ const InputField = ({onChangeText, value, placeholder, secureTextEntry}) => {
                 autocorrect = {false}
                 placeholder = {placeholder}
                 secureTextEntry = {secureTextEntry}
+                placeholderTextColor="#777777"
             />
         </View>
     );
@@ -21,10 +22,10 @@ const styles = {
         height: 20,
         color: '#000',
         paddingRight: 5,
-        paddingLeft: 5,
-        fontSize: 18,
+        paddingLeft: 12,
+        fontSize: 14,
         lineHeight: 23,
-        flex: 2,
+        flex: 2
     },
     labelStyle: {
         fontSize: 18,

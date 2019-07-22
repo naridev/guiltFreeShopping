@@ -1,15 +1,17 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import MainApp from './src/App';
 
 
-const App = props => {
-  return (
+class App extends Component {
+  render() {
+    return (
     <View style={styles.container}>
       <MainApp/>
     </View>
-  );
+    );
+  };
 }
 
 const styles = StyleSheet.create({

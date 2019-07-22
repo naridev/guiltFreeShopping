@@ -25,14 +25,15 @@ const Container = styled.View`
 `;
 
 const InputSection = styled.View`
+    flex: 1;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 50;
 `;
 
-const SocialSection = styled.View`
-    justify-content: center;
-    flex-direction: column;
+const ImgWrapper = styled.View`
+    height: 70;
 `;
 
 const BackSection = styled.View`
@@ -57,38 +58,39 @@ const LoginScreen = props => {
                     onPress={()=>{
                     props.history.push('/base');
                     }}
-                    style={{alignSelf:'flex-start',justifyContent: 'flex-start'}}
+                    style={{alignSelf:'flex-start'}}
                 />
             </BackSection>
+            {/* <Text style={{fontFamily: 'Verbana'}}>this is a test</Text> */}
 
             <InputSection>
                 <InputField
-                    placeholder='label1'
+                    placeholder='Email'
                 />
                 <InputField
-                    placeholder='label2'
+                    placeholder='Password'
                 />
                 <PinkButton
                     title={'Sign In'}
                 />
-            </InputSection>
-
-            <SocialSection>
-                <Image
-                    source={facebook}
-                />
+                <ImgWrapper>
+                    <Image
+                        source={facebook}
+                    />
+                </ImgWrapper>
                 <Image
                     source={twitter}
                 />
-            </SocialSection>
+            </InputSection>
 
+            {/* Background Image */}
             <BackImage
-            source={group}
-            style={{zIndex:-1}}
+                source={group}
+                style={{zIndex:-1}}
             />
             <BackImage
-            source={layerCopy}
-            style={{zIndex:-2, left:'40%', top: '15%'}}
+                source={layerCopy}
+                style={{zIndex:-2, left:'40%', top: '15%'}}
             />
         </Container>
     )
